@@ -4,6 +4,7 @@ buildscript {
     dependencies {
         classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.5.8.RELEASE'
         classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.8.1'
+        classpath 'org.owasp:dependency-check-gradle:4.0.2'
     }
 }
 
@@ -39,6 +40,7 @@ sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
 apply from: 'airgap.gradle'
+apply plugin: 'org.owasp.dependencycheck'
 
 build {
     doLast {
